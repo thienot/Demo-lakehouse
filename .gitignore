@@ -1,0 +1,4 @@
+/airflow-local/logs
+/airflow-local/dags/__pycache__
+data/raw/*.csv
+data/output/*

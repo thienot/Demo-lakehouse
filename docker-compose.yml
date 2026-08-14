@@ -18,6 +18,9 @@ services:
     ports:
       - "8080:8080"
       - "7077:7077"
+    volumes:
+    - ./data:/opt/spark/data
+    - ./spark/apps:/opt/spark/apps
     command: >
       /opt/spark/bin/spark-class
       org.apache.spark.deploy.master.Master
@@ -32,6 +35,9 @@ services:
       - SPARK_WORKER_CORES=2
     ports:
       - "8081:8081"
+    volumes:
+      - ./data:/opt/spark/data
+      - ./spark/apps:/opt/spark/apps
     depends_on:
       - spark-master
     command: >
