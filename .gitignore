@@ -2,3 +2,4 @@
 /airflow-local/dags/__pycache__
 data/raw/*.csv
 data/output/*
+spark/jars
